@@ -8,5 +8,13 @@
   <p>
     Click the button to add 1
   </p>
+  <button onClick="FizzBuzzRules()">add value</button>
+  <p id="value"></p>
+<script>
+  vari=1;
+  function FizzBuzzRules() {
+    document.getElementById("value").innerHTML = i++;
+    }
+</script>
 </body>
 </html>

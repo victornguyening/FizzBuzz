@@ -1,7 +1,12 @@
 <html>
 <body>
   <heading>
-   <strong>FizzBuzz Challenge</strong>
+   <strong>
+    FizzBuzz Challenge
+   </strong>
   </heading>
+  <p>
+    Click the button to add 1
+  </p>
 </body>
 </html>

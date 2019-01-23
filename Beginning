@@ -14,6 +14,7 @@
   vari=1;
   function FizzBuzzRules() {
     document.getElementById("value").innerHTML = i++;
+      if (i%15===1){document.getElementById("value").innerHTML = "FizzBuzz";}
     }
 </script>
 </body>

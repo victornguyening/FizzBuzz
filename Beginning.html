@@ -2,12 +2,24 @@
   <body>
     <heading> <strong> FizzBuzz Challenge </strong> </heading>
     <p>Click the button to add 1</p>
-    <button onClick="FizzBuzzRules()" onClick="set()">add value</button>
+    <button onClick="set()">add value</button>
     <p id="value"></p>
 
     <script>
+      var i=1
+      get("http://131.247.210.6:8000/" + username.get("uname")).then(function(
+        response
+      ) {
+        if (response.status == 200) {
+          const username = response.data.id;
+          const score = response.data.score;
+        } else {
+          post("http://131.247.210.6:8000/" + username.get("uname"), {
+            score: i
+          });
+        }
+      });
       console.log(get);
-      var i = 1;
       function FizzBuzzRules() {
         document.getElementById("value").innerHTML = ++i;
         if (i % 15 === 0) {
@@ -42,10 +54,12 @@
         });
       }
       function set() {
+        console.log("hello");
         var search = window.location.search;
         var username = new URLSearchParams(search);
+        FizzBuzzRules();
         post("http://131.247.210.6:8000/" + username.get("uname"), {
-          score: ++i
+          score: i
         });
       }
     </script>

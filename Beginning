@@ -8,5 +8,16 @@
   <p>
     Click the button to add 1
   </p>
+  <button onClick="FizzBuzzRules()">add value</button>
+  <p id="value"></p>
+<script>
+  vari=1;
+  function FizzBuzzRules() {
+    document.getElementById("value").innerHTML = i++;
+      if (i%15===1){document.getElementById("value").innerHTML = "FizzBuzz";}
+      else if (i%3===1){document.getElementById("value").innerHTML = "Fizz"}
+      else if (i%5===1){document.getElementById("value").innerHTML = "Buzz"}
+    }
+</script>
 </body>
 </html>

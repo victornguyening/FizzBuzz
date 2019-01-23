@@ -11,7 +11,7 @@
   <button onClick="FizzBuzzRules()">add value</button>
   <p id="value"></p>
 <script>
-  vari=1;
+  var i=1;
   function FizzBuzzRules() {
     document.getElementById("value").innerHTML = i++;
       if (i%15===1){document.getElementById("value").innerHTML = "FizzBuzz";}

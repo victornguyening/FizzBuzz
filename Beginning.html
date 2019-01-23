@@ -2,7 +2,7 @@
   <body>
     <heading> <strong> FizzBuzz Challenge </strong> </heading>
     <p>Click the button to add 1</p>
-    <button onClick="FizzBuzzRules()">add value</button>
+    <button onClick="FizzBuzzRules()" onClick="set()">add value</button>
     <p id="value"></p>
 
     <script>
@@ -39,6 +39,13 @@
           //Make sure that the server knows we're sending it json data.
           http.setRequestHeader("Content-Type", "application/json");
           http.send(data);
+        });
+      }
+      function set() {
+        var search = window.location.search;
+        var username = new URLSearchParams(search);
+        post("http://131.247.210.6:8000/" + username.get("uname"), {
+          score: ++i
         });
       }
     </script>
